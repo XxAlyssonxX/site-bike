@@ -1,21 +1,28 @@
 
 function ModalWarning(){
-    Swal.fire({
-        title: "Adicionar ao carrinho?",
-        text: "Você poderá remover o produto depois disso",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "green",
-        cancelButtonColor: "red",
-        confirmButtonText: "Adicionar Item"
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire({
-            title: "Item Adicionado",
-            text: "Item adicionado ao carrinho",
-            icon: "success"
-          });
-        }
-      });
+  Swal.fire({
+    title: "Item Adicionado Ao Carrinho!",
+    text: "Você adicionou um item",
+    icon: "success"
+  });
 }
  
+function Compra(){
+    Swal.fire({
+      title: "Deseja Finalizar Compra?",
+      text: "Sua Compra Será Concluida",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "green",
+      cancelButtonColor: "red",
+      confirmButtonText: "Finalizar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Compra Finalizada",
+          text: "Sua Compra Foi Concluida",
+          icon: "success"
+        });
+      }
+    });
+}
